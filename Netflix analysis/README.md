@@ -19,30 +19,30 @@ The dataset used in this analysis includes a wide range of attributes that provi
 
 1. **Data Cleaning and Preparation:**
 
-- **Handling Missing Values:** Filled missing values in director, cast, and country with 'NA'. Converted date_added to a datetime format.
-- **Duplicate Checks:** Ensured there were no duplicate entries in the dataset.
+   - **Handling Missing Values:** Filled missing values in director, cast, and country with 'NA'. Converted date_added to a datetime format.
+   - **Duplicate Checks:** Ensured there were no duplicate entries in the dataset.
 
 2. **Data Exploration:**
 
-- **Content Distribution:** Analyzed the distribution of movies vs TV shows.
-- **Country-wise Analysis:** Examined the number of shows produced by different countries.
-- **Temporal Analysis:** Investigated trends in content addition over the years.
+   - **Content Distribution:** Analyzed the distribution of movies vs TV shows.
+   - **Country-wise Analysis:** Examined the number of shows produced by different countries.
+   - **Temporal Analysis:** Investigated trends in content addition over the years.
 
 3. **Visualizations:**
 
-- **Content by Type:** Bar charts showing the number of movies and TV shows.
-- **Top Countries by Content:** Bar charts highlighting the top content-producing countries.
-- **Yearly Additions:** Line graphs depicting the number of shows added to Netflix each year.
+   - **Content by Type:** Bar charts showing the number of movies and TV shows.
+   - **Top Countries by Content:** Bar charts highlighting the top content-producing countries.
+   - **Yearly Additions:** Line graphs depicting the number of shows added to Netflix each year.
 
 ## Key Insights:
 
-- There is strong focus on Dramas and Comedies, which could be due to their popularity among viewers or a strategic content acquisition approach.
-- The United States is the top content producer with 2,734 titles.
-- New content is most actively added in December.
-- The year 2019 saw the highest number of content additions.
-- 21% of all countries has minimal presence on Netflix.
-- TV shows have an average duration of about 1.78 minutes per episode, which seems unusually low and may indicate a data inconsistency.
-- The top ten directors featured in Netflix titles predominantly work in the Stand-Up genre and originate from Mexico or the United States.
+- There is strong focus on **Dramas and Comedies**, which could be due to their popularity among viewers or a strategic content acquisition approach.
+- **The United States** is the top content producer with 2,734 titles.
+- New content is most actively added in **December**.
+- The year **2019** saw the highest number of content additions.
+- **21%** of all countries has **minimal presence** on Netflix.
+- **TV shows** have an average duration of about **1.78 minutes** per episode, which seems unusually low and may indicate a data inconsistency.
+- **Top directors** featured in Netflix titles predominantly work in the **Stand-Up** genre and originate from **Mexico** or **the United States**.
 
 ## Recommendations
 
