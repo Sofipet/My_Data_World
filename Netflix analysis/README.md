@@ -17,10 +17,6 @@ The dataset used in this analysis includes a wide range of attributes that provi
 
 ## Methodology
 
-1. **Data Loading and Cleaning:**
-  - Imported the sales data.
-  - Cleaned the data by handling missing values and correcting any discrepancies.
-    
 1. **Data Cleaning and Preparation:**
 
 - **Handling Missing Values:** Filled missing values in director, cast, and country with 'NA'. Converted date_added to a datetime format.
