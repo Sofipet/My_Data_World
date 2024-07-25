@@ -1,7 +1,7 @@
 # Southeast Asian Grocery Store Sales Analysis
 
 ## Introduction
-This project focuses on analyzing the sales data of grocery stores on Southeast Asia to uncover trends, patterns, and insights that can help improve business decisions. The analysis involves data exploration and visualization to understand customer behavior and optimize sales strategies. 
+This project focuses on analyzing the sales data of grocery stores in Southeast Asia to uncover trends, patterns, and insights that can help improve business decisions. The analysis involves data exploration and visualization to understand customer behavior and optimize sales strategies. 
 
 ## Objectives
 
