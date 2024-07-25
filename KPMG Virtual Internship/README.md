@@ -12,7 +12,7 @@ This project analyzes customer data from Sprocket Central Pty Ltd to identify th
 ### Data Cleaning
 - Handling null values
 - Correcting inconsistencies (e.g., date formats, categorical values)
-- Data transformation (e.g., deriving age from DOB)
+- Data transformation (e.g., deriving age from DOB, merging data)
 
 ## Analysis
 ### Methodology
