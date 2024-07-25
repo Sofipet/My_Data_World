@@ -1,5 +1,5 @@
 # Data Analysis Projects
-Welcome to the repository! This collection contains various data analysis projects that I have worked on. Each project is designed to to tackle real-world problems, explore different datasets and showcase my skills in data manipulation, visualization as well as insights generation.
+Welcome to the repository! This collection contains various data analysis projects that I have worked on. Each project is designed to tackle real-world problems, explore different datasets and showcase my skills in data manipulation, visualization as well as insights generation.
 
 ## Tools Used
 
