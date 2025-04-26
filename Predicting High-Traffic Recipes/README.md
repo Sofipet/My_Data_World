@@ -97,10 +97,11 @@ Binary classification — predict whether a recipe will be high-traffic (1) or n
 
 ## 8. Files
 
-| File                          | Description                             |
-|------------------------------- |-----------------------------------------|
-| `recipe_site_traffic_2212.csv` | Original dataset                        |
-| `recipe_prediction.ipynb`      | Full data cleaning, EDA, modeling code  |
+| File                               | Description                               |
+|------------------------------------|-------------------------------------------|
+| `recipe_site_traffic_2212.csv`     | Original dataset                         |
+| `recipe_prediction.ipynb`          | Full data cleaning, EDA, modeling code    |
+| `High_Traffic_Recipes_Presentation.pdf` | Presentation for product manager    |                  
 
 ## 9. Future Work
 
