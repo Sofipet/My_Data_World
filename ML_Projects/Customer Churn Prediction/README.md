@@ -65,7 +65,7 @@ The dataset contains three files:
 
 Here is the leaderboard public score for the best model (**XGBoost with Hyperopt tuning**):
 
-![Kaggle Score](<img width="1624" height="822" alt="image" src="https://github.com/user-attachments/assets/ff377a20-00a3-4290-93f0-a6f97da80fe2" />)
+<img width="1624" height="822" alt="image45" src="https://github.com/user-attachments/assets/ab4f1af0-349b-42d3-a349-3f042ad5cb91" />
 
 
 ## Business Impact
