@@ -1,5 +1,5 @@
 # My Data World
-Welcome :) This is a collection of projects that trace my journey from early data analysis to advanced machine learning solutions. Each repository focuses on a specific challenge, showcasing how I approach data problems from exploration to insights and modeling.  
+This is a collection of projects that trace my journey from early data analysis to advanced machine learning solutions. Each repository focuses on a specific challenge, showcasing how I approach data problems from exploration to insights and modeling.  
 
 ## What’s Inside
 - Early **data analysis** projects exploring SQL, visualization, and business reporting.  
