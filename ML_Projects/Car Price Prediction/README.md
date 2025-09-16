@@ -1,11 +1,10 @@
-# 🚗 Car Price Prediction (ML Project)
+# 🚗 Car Price Prediction 
 
-This project focuses on building a **machine learning solution** to predict car prices in India using the **Cars dataset**.  
+This project focuses on building a **machine learning solution** to predict car prices in India.  
 The goal was to explore the relationships between car characteristics and their price, preprocess the data, build regression models, and evaluate their performance.  
 
----
 
-## 📂 Dataset Overview
+## Dataset Overview
 
 The dataset (`cars.csv`) contains information about cars and their attributes:
 
@@ -17,7 +16,7 @@ The dataset (`cars.csv`) contains information about cars and their attributes:
 - **Power** – Maximum horsepower (bhp)  
 - **Seats** – Number of seats  
 - **Car_ID** – Unique identifier  
-- **Price** – 💰 Target variable (car price in INR)  
+- **Price** – Target variable (car price in INR)  
 
 ### Categorical Features
 - **Brand** (11 unique: Toyota, Honda, Ford, … Mercedes)  
@@ -26,18 +25,16 @@ The dataset (`cars.csv`) contains information about cars and their attributes:
 - **Transmission** (Manual, Automatic)  
 - **Owner_Type** (First, Second, Third → ordinal)
 
----
 
-## ⚙️ Preprocessing
+## Preprocessing
 
 - **Binary encoding** for *Fuel_Type* and *Transmission* (most frequent = 1).  
 - **One-Hot Encoding** for *Brand*.  
 - **Ordinal Encoding** for *Owner_Type* (`First < Second < Third`).  
 - **Train-test split**: 80% training, 20% test.  
 
----
 
-## 📊 Correlation Analysis
+## Correlation Analysis
 
 Heatmap showed strongest correlations with **Price**:
 
@@ -46,22 +43,20 @@ Heatmap showed strongest correlations with **Price**:
 - **Transmission type** (0.68)  
 - **Mileage** (0.64)  
 
-👉 Interpretation: More powerful cars with larger engines and automatic transmissions tend to be more expensive. Higher mileage (fuel efficiency) also increases price.
+Interpretation: More powerful cars with larger engines and automatic transmissions tend to be more expensive. Higher mileage (fuel efficiency) also increases price.
 
----
 
-## 🏗️ Model Training
+## Model Training
 
-We used **Linear Regression** as the baseline model.
+**Linear Regression** as the baseline model.
 
 - **RMSE Train**: 210,343  
 - **RMSE Test**: 259,601  
 
 Scatter plots show predictions closely follow the diagonal line, meaning good performance, though higher-priced cars show more variance due to limited data.
 
----
 
-## 🔍 Feature Importance
+## Feature Importance
 
 ### Positive Influences on Price
 - **Power**: strongest factor (higher power → higher price).  
@@ -73,9 +68,8 @@ Scatter plots show predictions closely follow the diagonal line, meaning good pe
 - **Economy brands** (Hyundai, Mahindra, Maruti) lower prices.  
 - **Kilometers driven & lower mileage** reduce price.  
 
----
 
-## 📑 Statistical Significance
+## Statistical Significance
 
 Using **OLS regression**:
 
@@ -90,9 +84,8 @@ Using **OLS regression**:
   - **R² = 0.958**, **Adj. R² = 0.948**  
   - Close to full model but with fewer predictors → good **balance between simplicity & performance**.
 
----
 
-## ✅ Key Insights
+## Key Insights
 
 - **Power** is the most important predictor of car price.  
 - **Premium brands** substantially increase value.  
@@ -100,9 +93,8 @@ Using **OLS regression**:
 - **Fuel type (Diesel), higher kilometers, lower mileage** reduce value.  
 - Simplified models with fewer predictors maintain nearly the same predictive power as full models.  
 
----
 
-## 📌 Conclusion
+## Conclusion
 
 This project demonstrates the full ML workflow:
 1. Data preprocessing (encoding categorical features, scaling).  
@@ -111,4 +103,4 @@ This project demonstrates the full ML workflow:
 4. Statistical testing for feature selection.  
 5. Trade-off analysis between model complexity and interpretability.  
 
-👉 **Best practical model**: using predictors with **p < 0.25**, which balances interpretability and predictive accuracy.  
+**Best practical model**: using predictors with **p < 0.25**, which balances interpretability and predictive accuracy.  
