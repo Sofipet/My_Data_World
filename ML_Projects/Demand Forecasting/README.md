@@ -1,53 +1,47 @@
-# 🛒 Demand Forecasting for Retail Sales
+# 🛒 Retail Demand Forecasting 
 
-Forecasting daily sales for **50 items across 10 stores (2013–2017)**.  
-Goal: predict future sales using machine learning models.  
-Metric: **MAPE (Mean Absolute Percentage Error)**.
-
-
-## Exploratory Analysis
-- Items and stores show clear **differences in sales levels**.  
-- **Seasonality** is visible (yearly peaks), but daily data makes patterns noisy.  
-- Weekly/monthly aggregation or log transform improves interpretability.  
+This project focuses on forecasting **daily sales for one store–item pair** (Store 1, Item 1, 2013–2017).  
+The objective was to predict future demand and improve inventory decisions.  
+Evaluation metric: **MAPE (Mean Absolute Percentage Error)**.
 
 
-## Baselines
-- **NaiveSeasonal (weekly):** MAPE ≈ 38%  
-- **NaiveDrift:** MAPE ≈ 69%  
+## Key Findings
+- Sales show **seasonality** (yearly and weekly patterns) with occasional spikes.  
+- Naive methods provided weak baselines (MAPE 38–69%).  
+- Advanced models significantly improved forecast accuracy.  
 
 
-## Models
-- **Exponential Smoothing:** MAPE ≈ 39% — smooth but misses sharp fluctuations.  
-- **ARIMA / AutoARIMA:** similar to ES, no significant improvement without explicit seasonality.  
-- **XGBoost (lags + calendar features):** MAPE ≈ 27.6% — better fluctuation tracking.  
-- **RNN (LSTM):** MAPE ≈ 28.5% — promising, but needs more training.  
-- **Prophet:** best model overall; captures trend + seasonality well, but does not scale (would require 500 models).  
+## Model Performance
 
-**MAPE ≈ 23.8% (val)**
-<img width="1594" height="470" alt="image" src="https://github.com/user-attachments/assets/8c3e5d96-a098-4c23-9377-ace55f81337b" />
+| Model                  | MAPE (Validation) | Comments |
+|-------------------------|-------------------|----------|
+| Naive Drift             | ~69%              | Weak baseline |
+| Naive Seasonal (weekly) | ~38%              | Captures cycles only |
+| Exponential Smoothing   | ~39%              | Smooth, misses peaks |
+| ARIMA / AutoARIMA       | ~39%              | Struggles with daily data |
+| XGBoost (lags + cal.)   | ~27.6%            | Handles spikes, short-term effects |
+| RNN (LSTM)              | ~28.5%            | Promising, needs larger dataset |
+| **Prophet**             | **~23.8%**        | ✅ Best result, robust seasonality & trend |
 
-**MAPE ≈ 24.5% (backtest)**
-<img width="1594" height="470" alt="image" src="https://github.com/user-attachments/assets/2f242a6a-ef0e-4160-bfce-9b4c5ac396df" />
+**Validation example (MAPE ≈ 23.8%)**  
+<img width="1594" height="470" alt="val-forecast" src="https://github.com/user-attachments/assets/8c3e5d96-a098-4c23-9377-ace55f81337b" />
 
-
-
-## Key Insight
-- **Prophet gives highest accuracy**, but not scalable.  
-- **Global models (XGBoost, RNN)** are more practical for 500 series:  
-  - One model for all time series.  
-  - Faster training.  
-  - Captures shared seasonal patterns.
-
-## 💡 Business Impact
-Accurate sales forecasting enables retailers to:  
-- **Optimize inventory management** → reduce overstock and stockouts.  
-- **Increase revenue** → meet demand peaks without missing sales opportunities.  
-- **Improve logistics planning** → allocate resources (warehouses, deliveries) more efficiently.  
-- **Enhance customer satisfaction** → products available at the right time and place.  
-- **Support strategic decisions** → pricing, promotions, and supply chain planning.  
-
-By reducing MAPE from ~38% (naive baseline) to ~24% (advanced models), the company gains a **~37% improvement in forecast accuracy**, directly impacting profitability and operational efficiency.
+**Backtest example (MAPE ≈ 24.5%)**  
+<img width="1594" height="470" alt="backtest-forecast" src="https://github.com/user-attachments/assets/2f242a6a-ef0e-4160-bfce-9b4c5ac396df" />
 
 
-## Tools
-`Pandas` · `NumPy` · `Matplotlib` · `Statsmodels` · `Darts` 
+## Business Value
+Accurate forecasts at this level are critical for retail operations:
+
+- **Better stock management** → avoid overstock & shortages  
+- **Higher profitability** → reduce waste and lost sales  
+- **Improved customer experience** → ensure product availability  
+- **Decision support** → guide promotions, procurement, and pricing  
+
+Compared to a seasonal baseline (38% MAPE), Prophet reduced forecast error to **23.8%**, a **37% improvement** in accuracy.
+
+
+## Next Steps
+- Scale this pipeline to **all store–item combinations** (500+ time series).  
+- Explore **global models** (XGBoost, RNNs) for faster training across multiple series.  
+- Integrate forecasts into **supply chain planning systems** for automated reordering.
