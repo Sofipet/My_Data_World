@@ -2,25 +2,20 @@
 
 This project demonstrates different ways of using **Large Language Models (LLMs)** and **LangChain agents** for automation, search, and business analytics.
 
----
 
-## 1. 📌 Calling an LLM with a Basic Prompt
+## Calling an LLM with a Basic Prompt
 
 We start by calling OpenAI and HuggingFace (Mistral) models with a simple request:
 
 **Prompt**:  
 *"Explain briefly what quantum computing is, its advantages and current research. Answer ≤200 characters."*
 
-- **OpenAI Response** → More general, high-level explanation.  
-- **Mistral Response** → More specific, included examples (Shor’s and Grover’s algorithms).
+**Observation**: Mistral produced more detailed, example-driven answers, while OpenAI gave a concise overview.
 
-👉 **Observation**: Mistral produced more detailed, example-driven answers, while OpenAI gave a concise overview.
 
----
+## Creating a Parameterized Prompt
 
-## 2. 📝 Creating a Parameterized Prompt
-
-We used **PromptTemplate** to create a flexible text generation template.
+Used **PromptTemplate** to create a flexible text generation template.
 
 **Topics tested**:
 - Bayesian methods in ML  
@@ -31,33 +26,24 @@ We used **PromptTemplate** to create a flexible text generation template.
 - **OpenAI** → More concise, general summaries.  
 - **Mistral** → Richer explanations with examples.  
 
-We then compared responses using **ModelLaboratory** to analyze differences between models systematically.
+Compared responses using **ModelLaboratory** to analyze differences between models systematically.
 
----
 
-## 3. 🔍 Agent-Based Process Automation
 
-We built a **ReAct agent** with `DuckDuckGoSearchResults` to automate literature search.
+## Agent-Based Process Automation
+
+Built a **ReAct agent** with `DuckDuckGoSearchResults` to automate literature search.
 
 **Task**:  
 *"Find 5 recent scientific publications about Artificial Intelligence from 2023–2024. Format strictly: 1. Title — Authors — Short summary 2. ..."*
 
-### Results
-The agent performed iterative searches and compiled results such as:
+**Observation**: DuckDuckGo handled the search queries better than SerpAPI in this case.
 
-1. **Generative AI at Work** — Brynjolfsson, E. et al. — Impact of AI assistants on productivity.  
-2. **The Use of AI in Research** — The Guild Task Force — Institutional strategies for integrating AI.  
-3. **Artificial Intelligence and Its Applications** — Overview of AI across multiple domains.  
-4. **Generative AI: Societal Impact & IS Research** — Trends and opportunities for research.  
-5. **AI Ensemble for Gravitational Waves** — Application of AI in astrophysics.  
 
-👉 **Observation**: DuckDuckGo handled the search queries better than SerpAPI in this case.
 
----
+## Creating a Business Assistant Agent
 
-## 4. 📊 Creating a Business Assistant Agent
-
-We designed an **analytics assistant** with two tools:
+Designed an **analytics assistant** with two tools:
 
 - **Python REPL** → for calculations & forecasting.  
 - **DuckDuckGo Search** → for live economic and weather data.  
@@ -73,11 +59,8 @@ We designed an **analytics assistant** with two tools:
 - **Inflation**: moderate (~4.9% in Nov 2024).  
 - **Demand**: increasing globally despite lower export values.  
 
-👉 **Final Forecast**: ~236 tons in 2025, with note that external shocks could shift this number significantly.
 
----
-
-## 📌 Key Takeaways
+## Key Takeaways
 
 - **Model differences**: Mistral responses are more detailed, OpenAI more concise.  
 - **Parameterized prompts** allow systematic testing of topics.  
