@@ -17,4 +17,4 @@ Welcome :) This is a collection of projects that trace my journey from early dat
 
 I see this repo as both a **learning path** and a **portfolio**.
 
-✨ *Always exploring, always learning to turn data into decisions* ✨
+✨ *Always exploring, always finding better ways to turn data into decisions* ✨
