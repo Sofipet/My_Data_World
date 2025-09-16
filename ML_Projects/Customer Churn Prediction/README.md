@@ -1,6 +1,6 @@
 # 🏦 Customer Churn Prediction
 
-This project is inspired by a Kaggle competition focused on predicting customer churn — determining whether a client will continue using their bank account or close it.
+This project is inspired by a Kaggle competition and is focused on predicting customer churn, that is determining whether a client will continue using their bank account or close it.
 
 
 ## Problem Statement
