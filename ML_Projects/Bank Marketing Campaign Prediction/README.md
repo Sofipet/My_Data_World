@@ -1,63 +1,107 @@
-# 🏦 Bank Marketing Campaign Prediction
+# 🏦 Bank Marketing Campaign Prediction  
 
-This project focuses on predicting whether a client will subscribe to a **term deposit** (time deposit) after a direct marketing campaign by a Portuguese bank.  
-The problem is a **binary classification task** with the target variable:  
-- **y = yes** → the client subscribed  
-- **y = no** → the client did not subscribe  
+This project is based on the **Bank Marketing Dataset** from the UCI Machine Learning Repository.  
+The goal is to predict whether a bank client will **subscribe to a term deposit (y = yes/no)** after a direct marketing campaign.  
 
 ---
 
-## 📂 Dataset Overview
+## 📂 Dataset Overview  
 
-The dataset contains information about bank clients, details from the last marketing campaign, previous interactions, and macroeconomic indicators.  
+The dataset contains **41,188 records and 21 features** describing:  
 
-### 👤 Client Information
-- **age** → client’s age (numeric)  
-- **job** → type of employment (categorical: *admin., blue-collar, entrepreneur, housemaid, management, retired, self-employed, services, student, technician, unemployed, unknown*)  
-- **marital** → marital status (categorical: *divorced, married, single, unknown*)  
-  > *Note: divorced includes divorced, widowed, or widower*  
-- **education** → education level (categorical: *basic.4y, basic.6y, basic.9y, high.school, illiterate, professional.course, university.degree, unknown*)  
-- **default** → has credit in default? (*yes, no, unknown*)  
-- **housing** → has housing loan? (*yes, no, unknown*)  
-- **loan** → has personal loan? (*yes, no, unknown*)  
+- 👤 **Client Information**  
+  - `age` (numeric)  
+  - `job` (admin., blue-collar, management, retired, student, etc.)  
+  - `marital` (divorced, married, single, unknown)  
+  - `education` (basic, high school, professional, university, unknown)  
+  - `default`, `housing`, `loan` (yes/no/unknown)  
 
-### 📞 Last Contact Information
-- **contact** → communication type (*cellular, telephone*)  
-- **month** → month of last contact (*jan, feb, …, nov, dec*)  
-- **day_of_week** → day of the week (*mon, tue, wed, thu, fri*)  
-- **duration** → duration of the last contact in seconds (numeric)  
+- 📞 **Last Contact**  
+  - `contact` (cellular, telephone)  
+  - `month` (jan–dec), `day_of_week` (mon–fri)  
+  - `duration` (numeric, seconds)  
+    ⚠️ Strongly correlated with outcome but not available before the call → used for model comparison only.  
 
-⚠️ **Important note**: `duration` strongly affects the target (e.g., if duration = 0, then y = no). However, this variable is **unknown before the call** and only observed afterward (when the outcome is already determined).  
-👉 Therefore, `duration` should only be used for **model comparison**, not in the final predictive model.  
+- 📊 **Campaign Details**  
+  - `campaign` (# of contacts in this campaign)  
+  - `pdays` (days since last contact; 999 = never contacted)  
+  - `previous` (# of previous contacts)  
+  - `poutcome` (outcome of previous campaign: success/failure/none)  
 
-### 📊 Other Campaign Attributes
-- **campaign** → number of contacts during the current campaign for this client (numeric, includes last contact)  
-- **pdays** → number of days since client was last contacted in a previous campaign (numeric; `999` means client was not previously contacted)  
-- **previous** → number of contacts before this campaign (numeric)  
-- **poutcome** → outcome of previous campaign (*failure, nonexistent, success*)  
+- 🌍 **Macroeconomic Indicators**  
+  - `emp.var.rate` (employment variation rate)  
+  - `cons.price.idx` (consumer price index)  
+  - `cons.conf.idx` (consumer confidence index)  
+  - `euribor3m` (3-month Euribor rate)  
+  - `nr.employed` (number of employees)  
 
-### 🌍 Socio-Economic Indicators
-- **emp.var.rate** → employment variation rate (quarterly, numeric)  
-- **cons.price.idx** → consumer price index (monthly, numeric)  
-- **cons.conf.idx** → consumer confidence index (monthly, numeric)  
-- **euribor3m** → 3-month Euribor rate (daily, numeric)  
-- **nr.employed** → number of employees (quarterly, numeric)  
-
-### 🎯 Target Variable
-- **y** → did the client subscribe to a term deposit? (*yes, no*)  
+- 🎯 **Target**  
+  - `y = yes` → client subscribed  
+  - `y = no` → client did not subscribe  
 
 ---
 
-## 🎯 Objective
-The goal is to build a machine learning model that predicts whether a client will subscribe to a term deposit, helping the bank:  
-- Improve targeting of marketing campaigns  
-- Reduce costs by avoiding unpromising calls  
-- Increase subscription rates  
+## ⚡ Challenges  
+
+- Strong **class imbalance** (~11% subscribed).  
+- High **multicollinearity** among macroeconomic variables.  
+- Many **categorical features** with low-frequency categories.  
 
 ---
 
-## 🛠️ Tools & Methods
-- **Python**: Pandas, NumPy  
-- **Visualization**: Matplotlib, Seaborn  
-- **ML Models**: Logistic Regression, Random Forest, XGBoost  
-- **Evaluation**: Accuracy, ROC AUC, Precision/Recall, F1-score  
+## 🛠️ Approach  
+
+### 🔹 Preprocessing  
+- One-hot encoding for categorical features  
+- Scaling for numeric features (Logistic Regression, kNN)  
+- Feature engineering:  
+  - `campaign_log`  
+  - `no_prev_contact` flag  
+  - `age_cats` (age categories)  
+
+### 🔹 Handling Imbalance  
+- `class_weight='balanced'`  
+- Threshold tuning for decision boundary  
+
+### 🔹 Models  
+- Logistic Regression  
+- kNN  
+- Decision Tree  
+- XGBoost (tuned via **RandomizedSearchCV** and **Hyperopt**)  
+
+### 🔹 Evaluation  
+- **Primary metric:** ROC-AUC (robust under imbalance)  
+- Additional metrics: Precision, Recall, F1  
+
+---
+
+## 📈 Results  
+
+| Model                  | Key Hyperparameters                               | ROC-AUC (train) | ROC-AUC (val) | Notes                                                                 |
+|-------------------------|---------------------------------------------------|-----------------|---------------|----------------------------------------------------------------------|
+| Logistic Regression     | L2, class_weight=balanced                         | 0.935           | 0.943         | Strong baseline, high recall, but many false positives                |
+| kNN                    | n_neighbors=15                                    | 0.948           | 0.924         | Sensitive to scaling & k, weaker generalization                       |
+| Decision Tree          | max_depth=6, min_samples_leaf=50, balanced         | 0.945           | 0.945         | Interpretable, but less stable                                        |
+| XGBoost (RandomizedCV) | n_estimators=332, lr=0.01, max_depth=7, subsample=0.72 | 0.964           | 0.955         | Best model, stable performance                                        |
+| XGBoost (Hyperopt)     | n_estimators=225, lr=0.013, max_depth=9, subsample=0.67 | 0.974           | 0.954         | Similar performance, more complex search                              |  
+
+---
+
+## 🔎 Insights  
+
+- **Best model:** XGBoost (ROC-AUC ≈ 0.95).  
+- Logistic Regression works as a **solid interpretable baseline**.  
+- kNN underperforms due to high dimensionality.  
+- SHAP analysis confirmed the importance of:  
+  - Macroeconomic indicators (`emp.var.rate`, `nr.employed`)  
+  - `duration` (though not usable in production)  
+  - Seasonality (month, especially May campaigns)  
+- Errors often concentrated in **May campaigns** and certain macro contexts.  
+
+---
+
+## 🚀 Next Steps  
+
+- Optimize **decision threshold** for Precision/Recall trade-off.  
+- Experiment with **SMOTE** or undersampling for imbalance.  
+- Test **stacking/ensembling** (LogReg + Trees + Boosting).  
