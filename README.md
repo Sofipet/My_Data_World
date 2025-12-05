@@ -16,5 +16,3 @@ This is a collection of projects that trace my journey from early data analysis 
 
 
 I see this repo as both a **learning path** and a **portfolio**.
-
-✨ *Always exploring, always looking for better ways to turn data into decisions* ✨
