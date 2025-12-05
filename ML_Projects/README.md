@@ -5,7 +5,8 @@ Welcome to the **ML Projects** repository! This collection highlights machine le
 
 ## Tools & Libraries
 - **Python**: Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Statsmodels
-- **Natural Language Processing (NLP)**: NLTK, Regex, Bag-of-Words, TF-IDF   
+- **Natural Language Processing (NLP**8: NLTK, Regex, Bag-of-Words, TF-IDF, N-grams  
+- **Web Scraping & Automation**: Selenium, BeautifulSoup, Requests  
 - **Deep Learning**: PyTorch  
 - **Unsupervised Learning**: PCA, t-SNE, KMeans, Agglomerative Clustering, DBSCAN (Scikit-learn), SciPy  
 - **Visualization**: Matplotlib, Seaborn, Plotly  
@@ -40,3 +41,5 @@ Welcome to the **ML Projects** repository! This collection highlights machine le
 - [📝 Tweet Sentiment Classification](https://github.com/Sofipet/My_Data_World/tree/main/ML_Projects/Tweet%20Sentiment%20Classification):  
   Built a complete NLP pipeline to classify tweets into negative, neutral, and positive sentiment. Performed preprocessing, vectorization (Bag-of-Words and TF-IDF), and trained models including Logistic Regression, Random Forest, and XGBoost. Conducted confusion-matrix error analysis and feature-importance interpretation to understand emotional language patterns.
 
+- [🔍 Data Science Job Market Analysis (DOU.ua)](https://github.com/Sofipet/My_Data_World/tree/main/ML_Projects/Skill%20Extraction%20Workflow):  
+  Scraped 50+ Data Science vacancies using Selenium and BeautifulSoup. Extracted skills and responsibilities with GPT (OpenAI API) and analyzed market demand using NLP techniques (N-grams, WordCloud, regex preprocessing). Identified the most common required skills and trends such as LLM adoption and neural network demand.
