@@ -9,10 +9,11 @@ This is a collection of projects that trace my journey from early data analysis 
 
 ## Tech Stack
 - **Core**: Python (Pandas, NumPy, Scikit-learn), SQL  
-- **Visualization**: Matplotlib, Seaborn, Tableau  
-- **ML & Forecasting**: Logistic Regression, kNN, Decision Trees, XGBoost, LightGBM, Darts 
+- **Visualization**: Matplotlib, Seaborn, Plotly, Tableau  
+- **ML & Forecasting**: Logistic Regression, kNN, Decision Trees, XGBoost, LightGBM, Darts, PCA, t-SNE, KMeans, PyTorch
+- **NlP**: Bag-of-Words, TF-IDF, N-grams, Sentiment Classification  
 - **Explainability**: SHAP, regression diagnostics  
-- **Automation**: LangChain, API integrations, hyperparameter tuning (Grid/Random/Hyperopt)  
+- **Automation & Deployment**: LangChain, API integrations, hyperparameter tuning (Grid/Random/Hyperopt), Selenium, BeautifulSoup, Streamlit  
 
 
 I see this repo as both a **learning path** and a **portfolio**.
