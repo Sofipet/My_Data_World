@@ -11,7 +11,7 @@ This is a collection of projects that trace my journey from early data analysis 
 - **Core**: Python (Pandas, NumPy, Scikit-learn), SQL  
 - **Visualization**: Matplotlib, Seaborn, Plotly, Tableau  
 - **ML & Forecasting**: Logistic Regression, kNN, Decision Trees, XGBoost, LightGBM, Darts, PCA, t-SNE, KMeans, PyTorch
-- **NlP**: Bag-of-Words, TF-IDF, N-grams, Sentiment Classification  
+- **NLP**: Bag-of-Words, TF-IDF, N-grams, Sentiment Classification  
 - **Explainability**: SHAP, regression diagnostics  
 - **Automation & Deployment**: LangChain, API integrations, hyperparameter tuning (Grid/Random/Hyperopt), Selenium, BeautifulSoup, Streamlit  
 
