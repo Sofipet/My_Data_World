@@ -1,4 +1,4 @@
-# 🔍 Skill Extraction Workflow  
+# 🔍 Data Science Job Market Analysis 
 
 This project analyzes Data Science job vacancies collected from DOU.ua to identify the most in-demand skills on the Ukrainian job market. To ensure accuracy and eliminate noise, the analysis follows a three-stage workflow.
 
