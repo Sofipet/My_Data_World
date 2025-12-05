@@ -5,10 +5,11 @@ Welcome to the **ML Projects** repository! This collection highlights machine le
 
 ## Tools & Libraries
 - **Python**: Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Statsmodels  
-- **Visualization**: Matplotlib, Seaborn  
+- **Unsupervised Learning**: PCA, t-SNE, KMeans, Agglomerative Clustering, DBSCAN (Scikit-learn), SciPy  
+- **Visualization**: Matplotlib, Seaborn, Plotly  
 - **Time Series**: Statsmodels, Prophet, Darts  
 - **Model Explainability**: SHAP  
-- **Experimentation**: GridSearchCV, RandomizedSearchCV, Hyperopt
+- **Experimentation**: GridSearchCV, RandomizedSearchCV, Hyperopt  
 
 ## Contents
 
@@ -26,3 +27,7 @@ Welcome to the **ML Projects** repository! This collection highlights machine le
 
 - [🚗 Car Price Prediction](https://github.com/Sofipet/My_Data_World/tree/main/ML_Projects/Car%20Price%20Prediction):  
   Built regression models to estimate used car prices in India. Applied feature encoding, correlation analysis, and OLS regression. **Horsepower, brand, and transmission** emerged as main predictors. Simplified model achieved high accuracy with fewer features.
+
+- [🧑‍🤝‍🧑 Customer Personality Segmentation](https://github.com/Sofipet/My_Data_World/tree/main/ML_Projects/Customer%20Personality%20Segmentation):  
+  Performed unsupervised segmentation on a marketing dataset using KMeans, Agglomerative Clustering, DBSCAN, PCA, and t-SNE. Identified three distinct customer groups based on income, purchasing behavior, and engagement patterns. 
+
