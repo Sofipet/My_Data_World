@@ -5,14 +5,14 @@ Welcome to the **ML Projects** repository! This collection highlights machine le
 
 ## Tools & Libraries
 - **Python**: Pandas, NumPy, Scikit-learn, XGBoost, LightGBM, Statsmodels
-- **Natural Language Processing (NLP)**: NLTK, Regex, Bag-of-Words, TF-IDF, N-grams  
+- **Natural Language Processing (NLP)**: NLTK, Regex, Bag-of-Words, TF-IDF, N-grams, BERT  
 - **Web Scraping & Automation**: Selenium, BeautifulSoup, Requests  
 - **Deep Learning**: PyTorch  
 - **Unsupervised Learning**: PCA, t-SNE, KMeans, Agglomerative Clustering, DBSCAN (Scikit-learn), SciPy  
 - **Visualization**: Matplotlib, Seaborn, Plotly  
 - **Time Series**: Statsmodels, Prophet, Darts  
 - **Model Explainability**: SHAP
-- **Model Deployment & Apps**: Streamlit, Joblib 
+- **Model Deployment & Apps**: Streamlit, Joblib, FastAPI, Docker
 - **Experimentation**: GridSearchCV, RandomizedSearchCV, Hyperopt  
 
 
