@@ -13,7 +13,7 @@ This is a collection of projects that trace my journey from early data analysis 
 - **ML & Forecasting**: Logistic Regression, kNN, Decision Trees, XGBoost, LightGBM, Darts, PCA, t-SNE, KMeans, PyTorch
 - **NLP**: Bag-of-Words, TF-IDF, N-grams, BERT 
 - **Explainability**: SHAP, regression diagnostics  
-- **Automation & Deployment**: LangChain, API integrations, hyperparameter tuning (Grid/Random/Hyperopt), Selenium, BeautifulSoup, Streamlit, FastAPI, Docker 
+- **Automation & Deployment**: LangChain, API integrations, hyperparameter tuning (Grid/Random/Hyperopt), Selenium, BeautifulSoup, Streamlit, FastAPI, Docker, Hugging Face Spaces
 
 
 I view this repo as both a continuous **learning path** and a practical **portfolio**.
