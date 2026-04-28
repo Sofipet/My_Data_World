@@ -1,4 +1,4 @@
-# Geospatial Water Quality Prediction Challenge
+# 🌍 Geospatial Water Quality Prediction Challenge
 
 This challenge focused on predicting three water-quality indicators from geospatial, environmental, hydrological, soil, land-cover, and remote-sensing features.
 
