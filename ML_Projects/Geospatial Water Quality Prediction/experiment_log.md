@@ -1,4 +1,4 @@
-# Experiment Log: Geospatial Water Quality Prediction Challenge
+# Geospatial Water Quality Prediction Challenge
 
 ## Challenge Context
 
