@@ -1,7 +1,5 @@
 # Geospatial Water Quality Prediction Challenge
 
-## Challenge Context
-
 This challenge focused on predicting three water-quality indicators from geospatial, environmental, hydrological, soil, land-cover, and remote-sensing features.
 
 ## Targets
