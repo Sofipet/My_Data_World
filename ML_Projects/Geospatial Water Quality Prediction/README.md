@@ -172,11 +172,7 @@ Dropping entire feature families based on local tests hurt the leaderboard. This
 
 ## Final Status
 
-The challenge threshold was successfully passed.
-
-Final best verified true leaderboard score: 0.4199
-
-The most important contribution was the design and integration of time-aligned Google Earth Engine extreme and anomaly features into a target-wise tree-based regression stack.
+The challenge threshold was successfully passed. The most important contribution was the design and integration of time-aligned Google Earth Engine extreme and anomaly features into a target-wise tree-based regression stack.
 
 ## What I Would Do With More Time
 
